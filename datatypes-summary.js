@@ -27,7 +27,7 @@ const bigNumber = 234242344432234n // n bigInt representation
 // Non Primitive Datatypes (Referance type)
 
 //Array , Objects , Functions 
-// the Non Premitive datatype
+// the return type of Non Premitive datatype is always object
 
 //Array
 const heros =["Shaktiman","Naagraj","Krrish"]
