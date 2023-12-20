@@ -1,0 +1,29 @@
+
+=> open vs code from folder
+
+code .
+
+create repo on github
+=>copy repo link
+=>open that drive where we want to create project folder.
+=>run cmd on address bar
+=>git clone https://github.com/KrishanSurela/WebPages.git
+=>hit enter
+=>project folder automatically made
+=>open project folder
+=>run cmd and give command for open folder in vs code -> code . 
+=>create new file with any extension write sone code on it.
+=>save that file 
+=>ctrl+shift+G (Source Control is opened)
+=>add file with + icon (before ansure that git username and git email is available or not git email should be same with github account)
+=>give message
+=>commit
+=>sync changes / push 
+
+the code will push on github
+
+
+
+
+
+
