@@ -1,0 +1,67 @@
+JavaScript Execution Context or {}
+
+1. Global Execution Context
+2. Functional Execution Context
+3. Eval Execution Context
+
+{} Run in Two Phases
+
+1. Momory Creation Phase
+2. Execution Phase
+
+Let take a Program to understand How It Execute =>
+
+let val1=10;
+let val2 =5;
+function addNum(num1,num2){
+    let total = num1+num2;
+    return total
+}
+
+let result1 = addNum(val1,val2)
+let result2 = addNum(4,7)
+
+
+Execution Process=>
+1. GEC define in this keyword
+2. Memory Creation 
+        val1 = undefined
+        val2 = undefined
+        addNum = definition
+        result1 = undefined
+        result2 = undefined
+
+3.Execution Phase
+        val1=10
+        val2=5
+        addNum = GEC BOX[new variable environment +Execution thread] delete after execution phase
+                Memory Phase 
+                    val1 =undefined
+                    val2 =undefined
+                    total =undefined
+
+                Execution Context
+
+                    num1 =10
+                    num2=5
+                    total 15  return in GEC
+
+
+        addNum = GEC BOX[new variable environment +Execution thread] delete after execution phase
+                Memory Phase 
+                    val1 =undefined
+                    val2 =undefined
+                    total =undefined
+
+                Execution Context
+
+                    num1 =4
+                    num2=7
+                    total 11 return in GEC
+
+
+
+Call Stack =>
+
+LIFO => Last IN FIrst OUT
+
