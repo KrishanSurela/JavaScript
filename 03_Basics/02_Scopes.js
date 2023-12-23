@@ -22,14 +22,55 @@ if(true){
 
 console.log("Outer m :",m);//300 let global scope ko access krta hai 
 
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+ 
+
+//Nested Scope
+
+function one(){
     
+    const Username ="Krishan Surela"
+   
+    function two(){
+        const website = "Youtube"
+        console.log(Username); //child function h wo parent function ke variable k0 access kr skte hai
+    }
+    //console.log(website); error
+    two()
 }
+one()
 
 
 
+if (true) {
+    const username = "Krishan"
+    if(username==="Krishan"){
+        const website =" Google"
+        console.log(username + website);
+    }
+   // console.log(website); error
+}
+//console.log(username); error
+
+
+//++++++++++Interesting++++++++++
+
+
+console.log(addOne(5)) //6
+
+function addOne(num){  //Function
+    return num+1
+
+}
+//console.log(addOne(5)) //6
 
 
 
+//Hoisting
+
+addTwo(5) //error Cannot access 'addTwo' before initialization
+
+const addTwo = function(num){   //Expression 
+    return num+2
+}
+//console.log(addTwo(5)) //7
 
