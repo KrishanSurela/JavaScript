@@ -136,3 +136,38 @@ function returnSecondValue1(getArray){
     return getArray[2]
 }
 console.log(returnSecondValue1([100,200,500,800,400]));//500
+
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,400,500,2000))
+
+
+function calculateCartPrice(val1,val2,...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,400,500,2000))//500,2000
+
+//Function with Object
+
+const userone ={
+    username:"Krishan",
+    price:100
+}
+
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+handleObject(user)
+handleObject({
+    username:"Krishan",
+    price:399
+})
+
+const myArrayOne = [100,500,852,624,84]
+function returnThirdValue(getArray){
+    return getArray[2]
+}
+
+console.log(returnThirdValue(myArrayOne));
