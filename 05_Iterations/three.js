@@ -5,10 +5,10 @@
 // ["","",""]
 // [{},{},{}]
 
-const arr = [1,2,3,4,5,6]
+const arr = [6,5,4,3,2,1]
 
 for (const num of arr) {
-    console.log(num);
+    console.log(num); // direct value print huyi hai for of loop me
 }
 
 const greetings = "Hellow World !"
@@ -50,7 +50,8 @@ const map = new Map()
 //  for (const [key,value] of myObject) {
 //     console.log(key, ':-' , value);
 //  }object is not iterable here 
-//dusra tarika 
+// for of loop se object ko iterate nhi kr skte
+//dusra tarika for in loop
 
 //new file me
 
