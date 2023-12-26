@@ -55,3 +55,4 @@ const arr1 = [
 arr1.forEach((item)=> {
     console.log(item.languageName);
 })
+
