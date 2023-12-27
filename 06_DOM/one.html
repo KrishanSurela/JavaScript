@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 class="heading" id="title">DOM Learning Document bject Model <span style="display:none">test text</span></h1>
+        <h1>Jai Siya Ram</h1>
+        <h2>Krishan Kumar Surela</h2>
+        <h2>Krishan Kumar Surela</h2>
+        <h2>Krishan Kumar Surela</h2>
+        <input type="password" name="" id="">
+        <p>Lorem ipsum dolor sit,<h3>Kumar</h3> amet consectetur adipisicing elit. Consequatur, alias!
+
+            console.dir(document)
+        </p>
+        <ul>
+            <li>console.log(document.links)</li>
+            <li>console.log(document.links[3])</li>
+            <li>document.getElementById('Krishan').innerHTML="< h1>Jai Siya Ram" </ h1></li>
+            <li>document.getElementById('title').id</li>
+            <li>document.getElementById('title').className</li>
+
+            <li>document.getElementById('title').getAttribute('class')</li>
+            <li>document.getElementById('title').setAttribute('class','test')</li>
+            <li>const title =document.getElementById('title')</li>
+            <li>title.style.backgroundColor='green'</li>
+            <li>title.style.padding="15px"</li>
+            <li>title.style.borderRadius="15px"</li>
+            <li>title.textContent</li>
+            <li>title.innerHTML</li> 
+            <li>title.innerText</li>
+        </ul>
+        <ul>
+            <h1>Differnece b/w innerText and textContent</h1>
+            <p>title.textContent=><br>
+                'DOM Learning Document bject Model test text'<br>
+                title.innerHTML =><br>
+                'DOM Learning Document bject Model <span style="display:none">test text</span>' <br>
+                title.innerText =><br>
+                'DOM Learning Document bject Model'</p>
+        </ul>
+        <ul>
+            <li>document.getElementById('title').className</li>
+            <li>document.getElementByClassName('heading')</li>
+            <li>document.querySelector('#title')</li>
+            <li>document.querySelector('input[type="password"]')</li>
+            <li></li>
+        </ul>
+        <ul id="myul">
+            <li>const ulmy = document.querySelector('#myul')</li>
+            <li>const myli=ulmy.querySelector('li')</li>
+            <li>myli.style.backgroundColor="yellow"</li>
+            <li>myli.innerText ="two"</li>
+            <li>=> querySelectorAll => return NodeList</li>
+            <li>const templiList =document.querySelectorAll('li')</li>
+            <li>templiList.style.color="red"   error beacuse this is not array this is NodeList
+            </li>
+            <li>templiList[0].style.color="red"
+            </li>
+            <li>templiList.forEach( (l) =>{ 
+                l.style.backgroundColor="green"})</li>
+        </ul>
+        <ul>
+            <li class="list-item">const tempclasslist=document.getElementsByClassName('list-item')
+            </li>
+            <h2>Convert HTML Collction to NodelIst</h2>
+            <li class="list-item">const classArray=Array.from(tempclasslist)
+            </li>
+            <li class="list-item">classArray.forEach( (item)=>{
+                item.style.backgroundColor="blue"
+        })
+        </li>
+            <li class="list-item">myh2list.forEach(function(h){
+                h.style.color='red'
+            })
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
