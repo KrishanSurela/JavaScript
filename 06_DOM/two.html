@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Chai AUr code</title>
+  </head>
+  <body style="background-color: #212121;color:#fff">
+    <div class="parent">
+        <!-- this is comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);//line 9 to line 14 code
+    console.log(parent.children[3].innerHTML);//Thursday
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML)
+    }
+
+    parent.children[1].style.color="Orange"
+    console.log(parent.firstElementChild);//line 10 html code  <div class="day">Monday</div>
+    console.log(parent.lastElementChild)//      <div class="day">Thursday</div>
+
+    const dayOne=document.querySelector('.day')
+    console.log(dayOne);// <div class="day">Monday</div>
+
+    console.log(dayOne.parentElement)//line 9 to 14
+
+    console.log(dayOne.nextElementSibling);//line 11
+//intersting and surprising
+    console.log("NODES: ",parent.childNodes);
+    // NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+  </script>
+</html>
