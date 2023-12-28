@@ -1,6 +1,6 @@
 # Project 2 Solution Code
 
-```
+```javascript
 const form = document.querySelector('form');
 
 //const height = parseInt(document.querySelector('#height').value)
