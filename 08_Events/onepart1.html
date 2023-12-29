@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event In js Chai Aur Code</title>
-</head>
-<body style="background-color: #414141; color: aliceblue">
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
     <h2>Amazing Images</h2>
     <div>
       <ul id="images">
@@ -23,4 +23,30 @@
       </ul>
     </div>
   </body>
+  <script>
+    const ul = document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e.target.parentNode);
+        // console.log(e.target.tagName);//LI UL IMG
+
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+          // removeIt.parentNode.removeChild(removeIt)
+        }
+      },
+      false
+    );
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        console.log("Google CLicked");
+      },
+      false
+    );
+  </script>
 </html>
