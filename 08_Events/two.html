@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript Fundamental</title>
+  </head>
+  <body>
+    <h3>Default JavaScript</h3>
+    <ul>
+      <li>It is Synchronus Language</li>
+      <li>Single Threaded Language</li>
+    </ul>
+    <h3>Execution Context</h3>
+    <ul>
+      <li>Execute one line of code at a time</li>
+      <li>console.log-> 1</li>
+      <li>console.log-> 1</li>
+      <li><pre>JS Engine=>Call Stack  Memory heap single threaded</pre></li>
+      <li>
+        Each Operation waits for the last one to complate before executing
+      </li>
+    </ul>
+    <h3>Blocking Code Vs Non Blocking Code</h3>
+    <table width="500px" border="1">
+      <tr>
+        <td>Sn</td>
+        <td>Blocking Code</td>
+        <td>Non-Blocking Code</td>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Block The Flow Of Program</td>
+        <td>Does not block Execution</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Read File Sync</td>
+        <td>Read File Async ex. web API,node API,settimeOut,setinterval etc</td>
+      </tr>
+    </table>
+    <h3>Promise Queue (High Priority Queue)</h3>
+    <div class="image"><img width="500px" src="../image/ss1.png" alt="" /></div>
+  </body>
+</html>

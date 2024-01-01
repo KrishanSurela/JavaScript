@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study For Event</title>
+  </head>
+  <body>
+    <!-- //type,timestamp,defaultPrevented,
+//target,toElement ,srcElement ,currentTarget
+//clientX,clientY,scrrenX,scrrenY
+//altkey,ctrlkey,shiftkey,keycode -->
+
+    <p>Press any key or click the mouse to get the event type.</p>
+    <p id="log"></p>
+    <p>
+      Focus this iframe and press any key to get the current timestamp for the
+      keypress event.
+    </p>
+    <p>timeStamp: <span id="time">-</span></p>
+  </body>
+  <script>
+    //type Property of event
+
+    function getEventType(event) {
+      const log = document.getElementById("log");
+      log.innerText = `${event.type}\n${log.innerText}`;
+    }
+
+    // Keyboard events
+    document.addEventListener(
+      "keydown",
+      function getEventType(e) {
+        const log = document.getElementById("log");
+        log.innerText = `${e.type}\n${log.innerText}`;
+      },
+      false
+    ); // first
+    document.addEventListener("keypress", getEventType, false); // second
+    document.addEventListener("keyup", getEventType, false); // third
+
+    // Mouse events
+    document.addEventListener("mousedown", getEventType, false); // first
+    document.addEventListener("mouseup", getEventType, false); // second
+    document.addEventListener("click", getEventType, false); // third
+
+    //TimeStamp
+    function getTime(event) {
+      const time = document.getElementById("time");
+      time.firstChild.nodeValue = event.timeStamp;
+      console.log(`${event.toElement}, ${event.srcElement}, ${event.target}`);
+    }
+    document.body.addEventListener("keypress", getTime);
+
+    //srcElement
+  </script>
+</html>
