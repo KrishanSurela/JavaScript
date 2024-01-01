@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Project | Chai Aur Code</title>
+</head>
+<body>
+    <h1>Krishan </h1>
+    <span id="clock"></span>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // function Hitesh(){
+    //     console.log("Krishan Surela");
+    // }
+    const Hitesh = function(){
+        console.log("Hitesh")
+    }
+    setTimeout(Hitesh,2000)
+    
+    // setInterval(function(){
+    // let date = new Date();
+    // console.log(date.toLocaleTimeString());
+    // clock.innerHTML = date.toLocaleTimeString()
+    // },2000)
+
+    const textChange = function(){
+        document.querySelector('h1').innerHTML="Best JS Series"
+    }    
+    const changeMe =setTimeout(textChange,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    })
+</script>
+</html>
