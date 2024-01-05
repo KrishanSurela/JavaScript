@@ -70,3 +70,4 @@ console.log(userTwo.constructor);
 // return type boolean
 
 //Syntax  => object instanceof constructor
+
