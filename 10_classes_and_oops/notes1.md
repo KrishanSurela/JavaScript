@@ -1,0 +1,1 @@
+# javascript's Default behavair is prototypial behavourz
