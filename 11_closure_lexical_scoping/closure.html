@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure and Lexical Scoping</title>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </head>
+  <body style="background-color: #313131"></body>
+  <script>
+    //lexical scoping
+    function init() {
+      let name = "Google Chrome";
+      function displayName() {
+        console.log(name);
+      }
+      displayName();
+    }
+    init();
+
+    function outer() {
+      let username = "surela";
+      function inner() {
+        console.log("inner :", username);
+      }
+      inner();
+    }
+    outer();
+    console.log("Too Outer :", username);
+
+    //Closure
+
+    function makeFunc() {
+      const name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName; //yaha pura ka pura lexical scope return ho rha hai means parent function ka scope return ho rha hai
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+  </script>
+  <script>
+    // document.getElementById("orange").onclick=function(){
+    //     document.body.style.backgroundColor= `Orange`
+    // }
+    // document.getElementById("green").onclick=function(){
+    //     document.body.style.backgroundColor= `green`
+    // }
+
+    /* Real World Issue */
+    function clickHandler(color) {
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+    document.getElementById("orange").onclick = clickHandler("orange");
+    document.getElementById("green").onclick = clickHandler("green");
+  </script>
+</html>
