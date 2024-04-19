@@ -34,7 +34,7 @@ console.table([accountId,accountEmail,accountPass,accountCity,accountState])
 
 // The let keyword was introduced in ES6 (2015)
 
-// Variables defined with let cannot be Redeclared
+// Variables defined with let cannot be Redeclared within the same scope.
 
 // Variables defined with let must be Declared before use
 
